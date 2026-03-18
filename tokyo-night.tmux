@@ -29,7 +29,7 @@ setw() {
 main() {
     local tmux_commands=()
 
-    source /dev/stdin <<<"$(sed -e "/^[^#].*=/s/^/local /" "${PLUGIN_DIR}/tokyonight.tmuxtheme")"
+    source /dev/stdin <<<"$(sed -e "/^[^#].*=/s/^/local /" "${PLUGIN_DIR}/tokyo-night-night.tmuxtheme")"
 
     set status "on"
     set status-bg "${thm_bg}"
@@ -47,29 +47,28 @@ main() {
     setw window-status-separator ""
     setw window-status-style "fg=${thm_fg},bg=${thm_bg},none"
 
-
     local wt_enabled
-    wt_enabled="$(get_tmux_option "@tokyonight_window_tabs_enabled" "off")"
+    wt_enabled="$(get_tmux_option "@tokyo-night_window_tabs_enabled" "off")"
     readonly wt_enabled
 
     local right_separator
-    right_separator="$(get_tmux_option "@tokyonight_right_separator" "")"
+    right_separator="$(get_tmux_option "@tokyo-night_right_separator" "")"
     readonly right_separator
 
     local left_separator
-    left_separator="$(get_tmux_option "@tokyonight_left_separator" "")"
+    left_separator="$(get_tmux_option "@tokyo-night_left_separator" "")"
     readonly left_separator
 
     local user
-    user="$(get_tmux_option "@tokyonight_user" "off")"
+    user="$(get_tmux_option "@tokyo-night_user" "off")"
     readonly user
 
     local host
-    host="$(get_tmux_option "@tokyonight_host" "off")"
+    host="$(get_tmux_option "@tokyo-night_host" "off")"
     readonly host
 
     local date_time
-    date_time="$(get_tmux_option "@tokyonight_date_time" "off")"
+    date_time="$(get_tmux_option "@tokyo-night_date_time" "off")"
     readonly date_time
 
     local show_directory
